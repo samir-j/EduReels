@@ -1,0 +1,38 @@
+:root {
+  --bg:#f7f8fb;
+  --card:#ffffff;
+  --muted:#666;
+  --accent:#2b6ef6;
+}
+
+* { box-sizing: border-box; }
+body,html,#root { height:100%; margin:0; font-family: Inter, Roboto, Arial, sans-serif; background:var(--bg); color:#111; }
+
+.app header { display:flex; align-items:center; justify-content:space-between; padding:16px 24px; background:linear-gradient(90deg,#fff,#f0f4ff); box-shadow:0 1px 4px rgba(0,0,0,0.04); }
+header h1 { margin:0; font-size:20px; letter-spacing:0.4px; display:flex; align-items:center; gap:10px; }
+.container { padding:24px; max-width:1200px; margin:0 auto; }
+
+.layout { display:grid; grid-template-columns: 280px 1fr 260px; gap:20px; align-items:start; }
+
+.left, .right { display:flex; flex-direction:column; gap:12px; }
+.center { display:flex; flex-direction:column; gap:14px; }
+
+.card { background:var(--card); padding:12px; border-radius:10px; box-shadow: 0 6px 18px rgba(13,38,76,0.04); }
+
+.auth-wrap { max-width:700px; margin:24px auto; display:flex; gap:20px; }
+
+.auth-card { width:100%; padding:18px; border-radius:10px; background:var(--card); }
+.auth-card input, .auth-card select { width:100%; padding:8px 10px; margin:8px 0; border-radius:6px; border:1px solid #e6e9ef; }
+.auth-card button { background:var(--accent); color:white; padding:8px 12px; border:none; border-radius:8px; cursor:pointer; }
+
+.upload-form input[type=file] { width:100%; }
+.upload-form input, .upload-form select { display:block; width:100%; margin:8px 0; padding:8px 10px; border-radius:6px; border:1px solid #e6e9ef; }
+.upload-form button { background:#0ea5a4; color:#fff; padding:8px 12px; border:none; border-radius:8px; cursor:pointer; }
+
+.feed { display:flex; flex-direction:column; gap:12px; }
+.video-card { display:flex; gap:12px; align-items:flex-start; background:var(--card); padding:10px; border-radius:10px; }
+.video-preview { width:320px; height:180px; background:#000; display:flex; align-items:center; justify-content:center; border-radius:8px; overflow:hidden; }
+.video-meta h4 { margin:0 0 6px 0; }
+.btn { border:none; padding:6px 10px; border-radius:8px; cursor:pointer; background:#edf2ff; color:var(--accent); }
+
+.small { font-size:13px; color:var(--muted); }
